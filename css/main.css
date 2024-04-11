@@ -3,8 +3,8 @@
 
     1.  General Styles
     2.  Main Nav
-    3.  Main Hero Image
-    4.  Main Hero Image Contact
+    3.  Main beer Image
+    4.  Main beer Image Contact
     5.  Why Couples Resort
     6.  About & FAQ
     7.  Contact Form
@@ -18,7 +18,7 @@
  /* 1. ---General Styles--- */
 
  body {
-    color: #626262;
+    color: #000000;
     font-family: 'Sanchez', 'Times New Roman', serif;
  }
  
@@ -39,28 +39,26 @@
  
  /* 2. ---Main Nav--- */
  
- #main-nav button {
+
+ #main-nav label img {
     width: 20px;
     height: 20px;
-    background: url(../images/burger.svg) no-repeat center;
     margin-top: 15px;
-    margin-bottom: 20px;
+    cursor: pointer;
     transition: all .5s ease;
-    border: 0;
- }
+    margin-bottom: 20px; 
+ } 
  
- #main-nav button.expanded {
-    transform: rotate(90deg);
- }
- 
- #burger-con {
-    margin-top: 20px;
-    margin-bottom: 20px;
+ #main-nav input, #burger-con {
     display: none;
  }
- 
- #burger-con.slide-toggle {
+  
+ #main-nav input:checked ~ #burger-con {
     display: block;
+ }
+ 
+ #main-nav input:checked ~ label img {
+    transform: rotate(90deg);
  }
  
  #main-nav ul {
@@ -73,16 +71,14 @@
     display: block;
     padding: 10px 0 10px 0;
     text-align: center;
-    color: #626262;
- }
- 
- #main-nav ul li a:hover {
-    color: #9a2018;
+    color: #242380;
  }
  
  #main-nav ul li {
     border-bottom: 1px solid #efefef;
  }
+ 
+ 
  
  #main-nav ul li:first-child {
     border-top: 1px solid #efefef;
@@ -90,7 +86,7 @@
  
  #main-nav ul li:last-child {
     margin-bottom: 10px;
- }
+ } 
  
  .book-now {
     background-color: #9a2018;
@@ -115,394 +111,74 @@
     max-width: 288px;
     margin-bottom: 20px;
  }
+
+ #burger {
+    margin-top: 50px;
+ }
  
- /* 3. ---Main Hero Image--- */
+ /* 3. ---Main beer Image--- */
  
- #hero img {
+ #beer img {
     grid-column: 1/-1;
     grid-row: 1/1;
     justify-self: center;
  }
  
- #hero-main {
+ #beer-main {
     height: 220px;
     /*  image keeps proper aspect ratio, is clipped to fit its container  */
     object-fit: cover;
  }
  
- #hero .grid-con {
+ #beer .grid-con {
     /* Telling this grid to live in the middle column */
     grid-column: 2/3;
-    /* also telling it stay in the first row, so it overlaps the hero image */
+    /* also telling it stay in the first row, so it overlaps the beer image */
     grid-row:1/1;
     /* get rid of margin 0 auto from the original class */
     margin: 0;
  }
  
- .book-now {
-    background-color: #9a2018;
-    color: #fff;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    transition: all 0.3s ease;
- }
- 
- .book-now:hover {
-    box-shadow: inset 0px -120px 0px rgb(196, 28, 28);
- }
- 
- #book-now-hero {
-    height: 67px;
- }
- 
- .hero-img-h2, .hero-img-h3 {
-    background-color: #fff;
-    padding: 10px 15px;
-    font-size: 14px;
- }
- 
- .hero-img-h2 span, .hero-img-h3 span {
-    color: #9a2018;
-    font-size: 12px;
- }
- 
- #booking-calendar {
-    display: none;
- }
- 
- #hero-heading-box {
-    align-self: end;
- }
  
  .line-seperator {
     margin-top: 20px;
-    border-top: solid 3px #CF6666;
+    border-top: solid 3px #ffffff;
     padding-top: 20px;
  }
  
- #hero-summary p {
+ #beer-summary p {
+    margin-top: 10px;
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 20px;
  }
- 
- /* 4. ---Main Hero Image Contact--- */
- 
- .fas {
-    font-size: 50px;
-    color: #9a2018;
-    float: left;
-    /* margin: 0 auto; */
- }
- 
- .fa-mobile-alt {
-    margin-right: 20px;
-    margin-left: 3px;
-    margin-bottom: 20px;
- }
- 
- .fa-map-marker-alt {
-    margin-right: 15px;
- }
- 
- #contact {
-    font-size: 12px;
-    background-color: #efefef;
-    padding-top: 30px;
-    padding-bottom: 30px;
- }
- 
- #contact .grid-con > div {
-    width: 240px;
-    margin: 0 auto;
- }
- 
- #why-choose-us-nav {
-    padding-top: 20px;
- }
- 
- #why-choose-us-nav ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
- }
- 
- #why-choose-us-nav ul li {
-    margin-bottom: 15px;
- }
- 
- #why-choose-us-nav ul li a {
-    color:#9a2018;
-    padding: 5px;
- }
- 
- #why-choose-us-nav ul li a.selected {
-    border-left: #9a2018 solid 5px;
- }
- 
- #why-choose-us-hero-con img {
-    /* stretch across all 3 columns */
-    grid-column: 1/-1;
-    /* stay in first row to allow for overlap */
-    grid-row: 1/1;
-    justify-self: center;
- }
- 
- #why-choose-us-hero {
-    height: 195px;
-    object-fit: cover;
-    object-position: 30%;
- }
- 
- #why-choose-us-hero-con .grid-con {
-    /* sit in the middle of the 3 column grid */
-    grid-column: 2/3;
-    /* stay in the top row, so it overalps the image */
-    grid-row: 1/1;
-    /* get rid of any margin from original .grid-con class */
-    margin: 0;
- }
- 
- #why-choose-us-heading-box {
-    align-self: end;
- }
- 
- .why-choose-us-image {
-    float: left;
-    margin-right: 20px;
-    margin-top: 30px;
- }
- 
- .why-choose-us-image span{
-    display: none;
- }
- 
- 
- .why-choose-us-image-con h2 {
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-top: 30px;
- }
- 
- .why-choose-us-image-con p {
-    font-size: 12px;
-    margin-bottom: 20px;
-    line-height: 20px;
- }
- 
- .why-choose-us-image-con a {
-    color: #707070;
-    font-size: 12px;
- }
- 
- .show-hide {
-    display: none;
- }
- 
- #why-choose-us-bottom-nav {
-    background-color: #CF6666;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 30px;
- }
- 
- #why-choose-us-bottom-nav ol {
-    list-style-type: none;
-    margin: 0 0 0 20px;
-    padding: 0;
- }
- 
- #why-choose-us-bottom-nav ol li {
-    display: inline;
- }
- 
- #why-choose-us-bottom-nav ol li a {
-    padding: 5px;
-    color: #fff;
- }
- 
- /* 6. ---About & FAQ--- */
- 
- #about-hero-con img {
-    /* stretch the image across the entire grid */
-    grid-column: 1/-1;
-    /* set the image to live in the first row */
-     grid-row:1/1;
-    justify-self: center;
- }
- 
- #about-hero-con .grid-con {
-     /* tell other grid to live in middle column */
-     grid-column: 2/3;
-     /* also tell it to stay in first rown instead of another row below
-     to allow overlap to happen */
-     grid-row:1/1;	
-     /* get rid of margin 0 auto from original class */
-     margin: 0;
- }
- 
- #about-hero {
-    object-fit: cover;
-    /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
-    object-position: right;
-    height: 195px;
- }
- 
- #about-hero-heading-box {
-    align-self: end;
- }
- 
- #about-us-text {
-    padding-bottom: 60px;
- }
- 
- #about-us-text p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 22px;
- }
- 
- #about-us-text-column2 {
-    font-style: italic;
- }
- 
- #faq-con {
-    background-color: #f4f4f4;
-    padding-top: 35px;
-    padding-bottom: 30px;
- }
- 
- .faq h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
- }
- 
- .faq h2 span {
-    color: #9a2018;
-    font-size: 16px;
- }
- 
- .faq-items {
-    margin-bottom: 16px;
- }
- 
- .faq-items h3 {
-    background: #e8e7e7;
-    padding: 16px;
-    font-size: 16px;
- }
- 
- .faq-items ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
- }
- 
- .faq-items li {
-    padding: 8px 0;
-    border-bottom: 1px solid #9a2018;
- }   
- 
- .faq-items a {
-    color: inherit;
-    font-size: 13px;
- }
- 
- #faq-text-con {
-    margin-top: 20px;
-    margin-bottom: 20px;
- }
- 
- /* 7. ---Contact--- */
- 
- #contact-hero-con img {
-    /* stretch the image across the entire grid */
-    grid-column: 1/-1;
-    /* set the image to live in the first row */
-     grid-row:1/1;
-    justify-self: center;
- }
- 
- #contact-hero-con .grid-con {
-     /* tell other grid to live in middle column */
-     grid-column: 2/3;
-     /* also tell it to stay in first rown instead of another row below
-     to allow overlap to happen */
-     grid-row:1/1;	
-     /* get rid of margin 0 auto from original class */
-     margin: 0;
- }
- 
- #contact-hero {
-    object-fit: cover;
-    /* First value controls the x-axis and the second value controls the y-axis,Default value:	50% 50% */
-    object-position: center;
-    height: 195px;
- }
- 
- #contact-hero-heading-box {
-    align-self: end;
- }
- 
- #contact-hero-text {
+
+ .heading {
     margin-top: 15px;
-    margin-bottom: 25px;
+    text-align: center;
+    font-size: 50px;
+    color:#242380;
  }
+
+ .sub-heading {
+    text-align: center;
+    font-size: 20px;
+    color: #242380;
+    margin-bottom: 10px;
+ }
+
+ .reviews {
+    background-color: #3f3ce530 ;
+ }
+
  
- #contact-hero-address p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 22px;
- }
  
- #contact-hero-address {
-    margin-bottom: 30px;
- }
  
- #contact-hero-address h3 {
-    margin-bottom: 25px;
- }
  
- #contact-hero-form form {
-    display: flex;
-    flex-direction: column;
- }
- 
- #contact-hero-form input, textarea {
-    padding: 22px;
-    border: 2px solid #d6d6d6;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    font: inherit;
-    width: 100%;
- }
- 
- #contact-hero-form textarea {
-    height: 250px;
- }
- 
- #contact-hero-form input[type="submit"] {
-    padding: 12px 28px;
-    background: #9a2018;
-    color: #fff;
-    border: none;
-    transition: all 200ms ease-in;
-    width: 150px;
-    align-self: flex-end;
- }
- 
- #contact-hero-form input[type="submit"]:hover {
-    background-color: #626262;
-    border-radius: 0;
- }
  
  /* 8. ---Footer--- */
  
- #footer-hero {
+ #footer-beer {
     background-image: url(../images/footer-mt.jpg);
      background-repeat: no-repeat;
      background-size: cover;
@@ -517,12 +193,12 @@
  
  @media screen and (min-resolution: 200dpi),
          screen and (min-resolution: 1.25dppx) {
-    #footer-hero {
-         background-image: url(../images/footer-mt@2x.jpg);
+    #footer-beer {
+         background-image: url(../images/mobile_footer.png);
      }		
  }
  
- #footer-hero h3 {
+ #footer-beer h3 {
     margin-top: 30px;
     font-size: 28px;
     margin-bottom: 16px;
@@ -562,8 +238,11 @@
     }
  
     #logo {
-       margin-top: 32px;
+       margin-top: 25px;
        order: -1;
+       height: 100px;
+       width: 200px;
+
     }
  
     #button {
@@ -599,16 +278,7 @@
        margin-bottom: 4%;
     }
  
-    #book-now-header {
-       display: flex;
-       margin-right: -16px;
-    }
- 
-    #book-now-hero {
-       display: none;
-    }
- 
-    #hero-main {
+    #beer-main {
        height: 455px;
        object-position: 30%;
     }
@@ -654,12 +324,12 @@
        cursor: pointer
     }
  
-    .hero-img-h2, .hero-img-h3 {
+    .beer-img-h2, .beer-img-h3 {
        padding: 30px 15px;
        font-size: 18px;
     }
  
-    .hero-img span, .hero-img-h3 span {
+    .beer-img span, .beer-img-h3 span {
        font-size: 14px;
     }
  
@@ -695,7 +365,7 @@
        padding-bottom: 25px;
     }
  
-    #why-choose-us-hero {
+    #why-choose-us-beer {
        height: 240px;
     }
  
@@ -779,7 +449,7 @@
        display: block;
     }
  
-    #about-hero {
+    #about-beer {
        height: 240px;
     }
  
@@ -791,10 +461,10 @@
        margin-bottom: 80px;
     }
  
-    #contact-hero {
+    #contact-beer {
        height: 240px;
     }
-    #contact-hero-text {
+    #contact-beer-text {
        padding-top: 50px;
        margin-top: 20px;
     }
@@ -814,7 +484,7 @@
        margin-top: 40px;
     }
  
-    #footer-hero {
+    #footer-beer {
        background-image: url(../images/footer-td.jpg);
     }
     
@@ -822,7 +492,7 @@
     
     @media screen and (min-resolution: 200dpi),
           screen and (min-resolution: 1.25dppx) {
-       #footer-hero {
+       #footer-beer {
           background-image: url(../images/footer-td@2x.jpg);
        }		  
     }
@@ -854,6 +524,7 @@
     #main-header {
        height: 110px;
     }
+
  
     #main-nav {
        margin-top: 2%;
@@ -882,15 +553,15 @@
        margin-top: 10px;
     }
  
-    .hero-img-h2, .hero-img-h3 {
+    .beer-img-h2, .beer-img-h3 {
        font-size: 24px;
     }
  
-    .hero-img-h2 span, .hero-img-h3 span {
+    .beer-img-h2 span, .beer-img-h3 span {
        font-size: 16px;
     }
  
-    #hero-main {
+    #beer-main {
        object-position: 15%;
     }
  
@@ -902,7 +573,7 @@
        margin-right: 40px;
     }
  
-    #why-choose-us-hero {
+    #why-choose-us-beer {
        height: 380px;
     }
  
@@ -919,11 +590,11 @@
        font-size: 24px;
     }
  
-    #about-hero {
+    #about-beer {
        height: 380px;
     }
  
-    #contact-hero {
+    #contact-beer {
        height: 380px;
     }
  }

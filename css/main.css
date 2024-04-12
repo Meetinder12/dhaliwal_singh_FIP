@@ -208,6 +208,10 @@
     margin-top: 0px;
  }
  
+#footer-contact-info {
+   display: flex;
+}
+
  #footer-contact-info h3 {
     font-size: 23px;
  }

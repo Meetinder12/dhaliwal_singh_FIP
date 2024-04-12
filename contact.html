@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Welcome Billy Beer</title>
+</head>
+    <body>
+        <h1 class="hidden">Welcome to The Couples Resort</h1>
+        <div id="sticky-nav-con">
+            <header class="grid-con" id="main-header">
+                <nav id="main-nav" class="col-span-full m-col-start-6 m-col-end-11 l-col-start-6 l-col-end-11">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <input type="checkbox" id="hamburger">
+                    <label for="hamburger">
+                    <img src="images/burger.svg" id="burger" alt="hamburger menu icon">
+                    </label>
+                    <div id="burger-con">
+                        <ul> 
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="stories.html">STORIES</a></li>
+                            <li><a href="contact.html">CONTACT US</a></li>
+                            <li><a href="#">SIGN IN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="logo" class="col-start-2 col-end-4 m-col-start-1 m-col-end-4 .l-col-start-1 .l-col-end-4">
+                    <img src="images/billy beer logo.svg" alt="Billy Beer Logo">
+                </div>
+
+            </header>
+        </div>
+
+        
+        <div class="grid-con">
+        <div id="contact-beer-form" class="col-span-full">
+
+
+            <form action="#" method="post" enctype="text/plain">
+                <input name="fullName" type="text" required placeholder="First & Last Name">
+                <input name="email" type="text" required placeholder="E-mail">
+                <input name="country" type="text" required placeholder="Country">
+                <input name="dateofbirth" type="text" required placeholder="Date of Birth">
+                <textarea name="msg" placeholder="Enter your questions, comments or concerns here..."></textarea>
+                <input name="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        </div>
+
+
+        <footer id="footer-beer">
+            <div class="grid-con">
+                    <div class="footer-rights col-start-1 col-end-3">
+                    <p>ALL RIGHT RESERVED</p>
+                    <p>  PRIVACY POLICY
+                    </p>
+                    </div>
+                    
+                    <div class="footer-rights col-start-3 col-end-5">
+                    <p>
+                        TERM OF USE</p>
+                      <p>  COOKIES POLICIES
+                    </p>
+                    </div>
+            
+            <img src="images/x-twitter.png" class="col-start-1 col-end-2" alt="twitter icon">
+            <img src="images/square-facebook.png" class="col-start-2 col-end-4" id="facebook" alt="facebook icon">
+            <img src="images/square-instagram.png" class="col-start-4 col-end-5" alt="instagram icon">
+                
+                <nav id="footer-nav" class="col-span-full m-col-start-6 m-col-end-9 l-col-start-5 l-col-end-8">
+                    <h2 class="hidden">Footer Nav</h2>
+                    <ul>
+                        <li><a class="active" href="index.html">HOME</a></li>
+                        <li><a href="#">STORIES</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">SIGN IN </a></li>
+
+                    </ul>
+                </nav>
+                <div id="footer-privacy" class="col-span-full m-col-start-2 m-col-end-12 line-seperator">
+                    <p id="price-policy">2023 THE AMERICAN BEER COMPANY LLC</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="js/main.js"></script>   
+    </body>
+</html>

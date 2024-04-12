@@ -54,7 +54,7 @@ img, embed, object, video, picture {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column-gap: 30px;
-    max-width: 1200px;
+    max-width: 412px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -89,6 +89,7 @@ img, embed, object, video, picture {
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 20px;
+       max-width: 1200px;
        padding-left: 16px;
        padding-right: 16px;
     }
@@ -145,6 +146,7 @@ img, embed, object, video, picture {
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 30px;
+       max-width: 1200px;
        padding-left: 15px;
        padding-right: 15px;
     }

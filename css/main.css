@@ -88,24 +88,7 @@
     margin-bottom: 10px;
  } 
  
- .book-now {
-    background-color: #9a2018;
-    color: #fff;
-    font-size: 16px;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
- }
- 
- .book-now:hover {
-    box-shadow: inset 0px -120px 0px rgb(196, 28, 28);
- }
- 
- #book-now-header {
-    display: none;
- }
+
  
  #logo {
     max-width: 288px;
@@ -125,7 +108,8 @@
  }
  
  #beer-main {
-    height: 220px;
+    height: 258px;
+    width: 412px;
     /*  image keeps proper aspect ratio, is clipped to fit its container  */
     object-fit: cover;
  }
@@ -138,6 +122,42 @@
     /* get rid of margin 0 auto from the original class */
     margin: 0;
  }
+
+
+ /* DRINKING BEER IMAGE */
+
+#drinking-beer img {
+   height: 258px;
+   width: 412px;
+   object-fit: cover;
+}
+
+
+
+/* BEER GLASS IMAGE */
+
+
+#beer-glass img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#beer-glass-main {
+   height: 258px;
+   width: 412px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
+   object-fit: cover;
+}
+
+#beer-glass .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 2/3;
+   /* also telling it stay in the first row, so it overlaps the beer image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
  
  
  .line-seperator {
@@ -162,16 +182,51 @@
 
  .sub-heading {
     text-align: center;
+    text-decoration: underline;
     font-size: 20px;
     color: #242380;
     margin-bottom: 10px;
+    padding-bottom: 10px;
  }
 
  .reviews {
     background-color: #3f3ce530 ;
  }
 
- 
+
+#contact-beer-form form {
+   display: flex;
+   flex-direction: column;
+}
+
+#contact-beer-form input, textarea {
+   padding: 22px;
+   border: 2px solid #d6d6d6;
+   background-color: #f7f7f7;
+   border-radius: 5px;
+   margin-bottom: 30px;
+   font: inherit;
+   width: 100%;
+}
+
+#contact-beer-form textarea {
+   height: 250px;
+}
+
+#contact-beer-form input[type="submit"] {
+   padding: 12px 28px;
+   background: #242380;
+   color: #fff;
+   border: none;
+   transition: all 200ms ease-in;
+   width: 150px;
+   align-self: flex-end;
+}
+
+#contact-beer-form input[type="submit"]:hover {
+   background-color: #626262;
+   border-radius: 0;
+}
  
  
  
@@ -184,9 +239,8 @@
      background-size: cover;
     background-position: center;
     color: #fff;
-    font-size: 12px;
     margin-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
  }
  
  /*image switching for retina screens*/
@@ -198,31 +252,25 @@
      }		
  }
  
- #footer-beer h3 {
-    margin-top: 30px;
-    font-size: 28px;
-    margin-bottom: 16px;
- }
- 
- #footer-privacy .line-seperator {
-    margin-top: 0px;
- }
- 
-#footer-contact-info {
-   display: flex;
+.footer-rights p{
+   margin-bottom: 20px;
 }
 
- #footer-contact-info h3 {
-    font-size: 23px;
+#footer-beer p {
+   padding-top: 10px;
+}
+ #facebook {
+   padding-left: 30%;
  }
- 
- #footer-contact-info p {
-    margin-bottom: 20px;
-    line-height: 18px;
-    font-size: 11px;
+
+ #footer-beer img {
+   padding-top: 50px;
  }
- 
- #footer-nav, #footer-book-now {
+
+ #price-policy {
+   text-align: center;
+ }
+ #footer-nav {
     display: none;
  }
  
@@ -239,6 +287,14 @@
        background-color: #fff;
        border-bottom: solid 1px #c3c3c3;
        z-index: 1;
+    }
+
+    #hamburger {
+      display: none;
+    }
+
+    #burger {
+      display: none;
     }
  
     #logo {
@@ -265,6 +321,7 @@
  
     #main-nav ul li a {
        display: inline;
+       font-size: 14px;
     }
  
     #burger-con ul li {
@@ -276,10 +333,14 @@
     }
  
     #main-nav {
-       border-left: 2px solid #707070;
        padding-left: 30px;
        margin-top: 4%;
        margin-bottom: 4%;
+       margin-top: 12%;
+    }
+    
+    #beer {
+      padding-top: 50px;
     }
  
     #beer-main {
@@ -287,182 +348,21 @@
        object-position: 30%;
     }
  
-    #booking-calendar {
-       display: block;
-       height: 200px;
-       background-color: #9a2018;
-       color: #fff;
-       margin-top: 50px;
-       padding: 30px 10px 20px 10px;
-    }
- 
-    #booking-calendar h3 {
-       font-size: 12px;
-       margin-bottom: 10px;
-    }
- 
-    #booking-calendar input[type="date"], #booking-calendar input[type="number"] {
-       padding: 4px;
-       background-color: #fff;
-       border: 2px solid #d6d6d6;
-       border-radius: 5px;
-       margin-bottom: 10px;
-       font: inherit;
-       width: 100%;
-    }
- 
-    #booking-calendar input[type="submit"] {
-       padding: 12px 0 12px 0;
-       background-color: #CF6666;
-       color: #fff;
-       border: solid 2px #cf6666;
-       border-radius: 10px;
-       width: 100%;
-       margin-top: 20px;
-       text-align: center;
-       transition: all 1s ease-in-out;
-    }
- 
-    #booking-calendar input[type="submit"]:hover {
-       border: solid 2px #fff;
-       cursor: pointer
-    }
- 
-    .beer-img-h2, .beer-img-h3 {
-       padding: 30px 15px;
-       font-size: 18px;
-    }
- 
-    .beer-img span, .beer-img-h3 span {
-       font-size: 14px;
-    }
- 
-    .fas {
-       font-size: 60px;
-    }
- 
+
     #contact {
        line-height: 22px;
        height: 214px;
        padding-top: 60px;
        font-size: 11px;
     }
+
+    #contact-beer-form {
+      padding-top: 50px;
+    }
  
     #contact .grid-con > div {
        width: auto;
        margin: 0;
-    }
- 
-    #why-choose-us-nav {
-       margin-top: 30px;
-       margin-bottom: 30px;
-    }
- 
-    #why-choose-us-nav ul li {
-       display: inline;
-       margin-right: 30px;
-    }
- 
-    #why-choose-us-nav ul li a.selected {
-       border-left: none;
-       border-bottom: 5px solid #9a2018;
-       padding-bottom: 25px;
-    }
- 
-    #why-choose-us-beer {
-       height: 240px;
-    }
- 
-    .why-choose-us-image {
-       float: none;
-       margin-right: 0px;
-       margin-top: 0px;
-       position: relative;
-    }
- 
-    .why-choose-us-image span{
-       display: block;
-       position: absolute;
-       bottom: 30px;
-       right: 0px;
-       color: #fff;
-       font-size: 88px;
-    }
- 
-    .why-choose-us-image-con h2 {
-       font-size: 22px;
-       margin-top: 0;
-       margin-bottom: 10px;
-    }
- 
-    .why-choose-us-image-con h3 {
-       font-size: 16px;
-       margin-bottom: 20px;
-    }
- 
-    .why-choose-us-image img {
-       filter: grayscale(100%);
-       z-index: -1;
-       /* set z-index lower so images don't overlap the nav
-       applying filters affects the browser painting order */
-       display: block;
-       /* the images were not fully filling the grid boxes, until I set them to block */
-    }
- 
-    .why-choose-us-image-con {
-       margin-bottom: 30px;
-    }
- 
-    #hot-tub p, #hot-tub a, #hot-tub h2 {
-       display: none;
-    }
- 
-    #spa {
-       background-color: #626262;
-       color: #fff;
-       padding: 20px;
-    }
- 
-    #spa p {
-       /* not supported in all browsers */
-       display: -webkit-box;
-       -webkit-line-clamp: 3;
-       -webkit-box-orient: vertical;  
-       text-overflow: ellipsis;
-       overflow: hidden;
-    }
- 
-    #spa a {
-       color: #fff;
-       padding-bottom: 5px;
-    }
- 
-    #spa a:hover {
-       border-bottom: solid 3px #9a2018;
-    }
- 
-    #why-choose-us-bottom-nav {
-       display: none;
-    }
- 
-    #why-choose-us {
-       margin-bottom: 80px;
-    }
- 
-    .show-hide {
-       display: block;
-    }
- 
-    #about-beer {
-       height: 240px;
-    }
- 
-    #about-us-text {
-       column-count: 2;
-    }
- 
-    #about-us-text-column1 {
-       margin-bottom: 80px;
     }
  
     #contact-beer {
@@ -472,24 +372,19 @@
        padding-top: 50px;
        margin-top: 20px;
     }
- 
-    #faq-text-con  {
-       column-count: 2;
-       text-align: left;
-    }
+
+   
  
     #footer-nav {
-       display: block;
+       display: inline;
+       text-align: center;
+ 
     }
  
-    #footer-book-now {
-       display: flex;
-       height: 80px;
-       margin-top: 40px;
-    }
+
  
     #footer-beer {
-       background-image: url(../images/footer-td.jpg);
+       background-image: url(../images/footer.png);
     }
     
     /*image switching for retina screens*/
@@ -497,13 +392,12 @@
     @media screen and (min-resolution: 200dpi),
           screen and (min-resolution: 1.25dppx) {
        #footer-beer {
-          background-image: url(../images/footer-td@2x.jpg);
+          background-image: url(../images/footer.png);
        }		  
     }
  
     #footer-nav {
        margin-top: 40px;
-       column-count: 2;
     }
  
     #footer-nav ul {
@@ -514,11 +408,20 @@
  
     #footer-nav ul li a {
        color: #fff;
+       margin-left: 25px;
+       margin-right: 25px;
+      
     }
  
     #footer-nav ul li {
        margin-bottom: 20px;
+       display: inline;
+      
     }   
+
+    #footer-rights p {
+      margin-top: 50px;
+    }
  
  }
  
@@ -545,54 +448,12 @@
        margin-top: 28px;
     }
  
-    .book-now {
-       font-size: 18px;
-    }
- 
-    #booking-calendar {
-       height: 234px;
-    }
- 
-    #check-availability {
-       margin-top: 10px;
-    }
- 
-    .beer-img-h2, .beer-img-h3 {
-       font-size: 24px;
-    }
- 
-    .beer-img-h2 span, .beer-img-h3 span {
-       font-size: 16px;
-    }
- 
+
     #beer-main {
        object-position: 15%;
     }
  
-    .fas {
-       font-size: 90px;
-    }
- 
-    .fa-mobile-alt, .fa-map-marker-alt {
-       margin-right: 40px;
-    }
- 
-    #why-choose-us-beer {
-       height: 380px;
-    }
- 
-    #spa p {
-       display: block;
-       -webkit-line-clamp: unset;
-       -webkit-box-orient: unset;
-       text-overflow: unset;
-       overflow: auto;
-    }
- 
-    #why-choose-us-nav {
-       margin-top: 50px;
-       font-size: 24px;
-    }
+    
  
     #about-beer {
        height: 380px;

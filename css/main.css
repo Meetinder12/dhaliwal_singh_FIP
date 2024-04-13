@@ -123,6 +123,28 @@
     margin: 0;
  }
 
+ /* LITTLEONE IMAGE */
+ #littleone-beer img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#littleone-beer-main {
+   width: 412px;
+   height: 224px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
+   object-fit: cover;
+}
+
+#littleone-beer .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 2/3;
+   /* also telling it stay in the first row, so it overlaps the hero image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
 
  /* DRINKING BEER IMAGE */
 
@@ -137,6 +159,7 @@
    height: 224px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
+   margin-right: 0;
 }
 
 #drinking-beer .grid-con {
@@ -398,7 +421,21 @@
        margin-top: 20px;
     }
 
+    #beer-main {
+      width: 1200px;
+      height: 550px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
     #drinking-beer-main {
+      width: 503px;
+      height: 400px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
+   #littleone-beer-main {
       width: 503px;
       height: 400px;
       /*  image keeps proper aspect ratio, is clipped to fit its container  */

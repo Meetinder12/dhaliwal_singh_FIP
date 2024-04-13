@@ -126,10 +126,26 @@
 
  /* DRINKING BEER IMAGE */
 
-#drinking-beer img {
-   height: 258px;
+ #drinking-beer img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#drinking-beer-main {
    width: 412px;
+   height: 224px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
+}
+
+#drinking-beer .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 2/3;
+   /* also telling it stay in the first row, so it overlaps the hero image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
 }
 
 
@@ -144,8 +160,7 @@
 }
 
 #beer-glass-main {
-   height: 258px;
-   width: 412px;
+   height: 220px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
 }
@@ -153,12 +168,11 @@
 #beer-glass .grid-con {
    /* Telling this grid to live in the middle column */
    grid-column: 2/3;
-   /* also telling it stay in the first row, so it overlaps the beer image */
+   /* also telling it stay in the first row, so it overlaps the hero image */
    grid-row:1/1;
    /* get rid of margin 0 auto from the original class */
    margin: 0;
 }
- 
  
  .line-seperator {
     margin-top: 20px;
@@ -226,6 +240,17 @@
 #contact-beer-form input[type="submit"]:hover {
    background-color: #626262;
    border-radius: 0;
+}
+
+
+#old-billy-text {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#new-billy-text {
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
  
  
@@ -373,6 +398,12 @@
        margin-top: 20px;
     }
 
+    #drinking-beer-main {
+      width: 503px;
+      height: 400px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
    
  
     #footer-nav {

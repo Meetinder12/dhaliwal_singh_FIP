@@ -108,7 +108,7 @@
  }
  
  #beer-main {
-    height: 245px;
+    height: 251px;
     width: 412px;
     /*  image keeps proper aspect ratio, is clipped to fit its container  */
     object-fit: cover;
@@ -116,7 +116,7 @@
  
  #beer .grid-con {
     /* Telling this grid to live in the middle column */
-    grid-column: 2/3;
+    grid-column: 1/-1;
     /* also telling it stay in the first row, so it overlaps the beer image */
     grid-row:1/1;
     /* get rid of margin 0 auto from the original class */
@@ -183,7 +183,8 @@
 }
 
 #beer-glass-main {
-   height: 220px;
+   width: 412px;
+   height: 251px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
 }
@@ -206,7 +207,7 @@
 
 #old-beer-main {
    width: 412px;
-   height: 224px;
+   height: 251px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
    margin-right: 0;
@@ -216,6 +217,28 @@
    /* Telling this grid to live in the middle column */
    grid-column: 2/3;
    /* also telling it stay in the first row, so it overlaps the hero image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
+
+#new-beer-story img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#new-beer-story-main {
+   height: 251px;
+   width: 412px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
+   object-fit: cover;
+}
+
+#new-beer-story .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 1/-1;
+   /* also telling it stay in the first row, so it overlaps the beer image */
    grid-row:1/1;
    /* get rid of margin 0 auto from the original class */
    margin: 0;
@@ -325,7 +348,7 @@
  }
  
 .footer-rights p{
-   margin-bottom: 20px;
+   margin-top: 50px;
 }
 
 #footer-beer p {
@@ -413,6 +436,7 @@
     
     #beer {
       padding-top: 50px;
+      text-align: center;
     }
  
     #beer-main {
@@ -466,12 +490,26 @@
       object-fit: cover;
    }
 
-   #old-beer-main {
-      width: 1200px;
-      height: 500px;
+   #beer-glass-main {
+      width: 768px;
+      height: 350px;
       /*  image keeps proper aspect ratio, is clipped to fit its container  */
       object-fit: cover;
-      margin-right: 0;
+   }
+
+   #old-beer-main {
+      width: 768px;
+      height: 350px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+
+   }
+
+   #new-beer-story-main {
+      width: 768px;
+      height: 350px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
    }
    
  
@@ -553,7 +591,34 @@
        object-position: 15%;
     }
  
-    
+    #beer-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
+   #beer-glass-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
+   #old-beer-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+
+   }
+
+   #new-beer-story-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
  
     #about-beer {
        height: 380px;

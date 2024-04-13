@@ -1,0 +1,467 @@
+/* 
+    CSS Guide 
+
+    1.  General Styles
+    2.  Main Nav
+    3.  Main beer Image
+    4.  Main beer Image Contact
+    5.  Why Couples Resort
+    6.  About & FAQ
+    7.  Contact Form
+    8.  Footer
+    9.  Custom Queries
+    10. Tablet Queries
+    11. Desktop Queries 
+ */
+
+
+ /* 1. ---General Styles--- */
+
+ body {
+    color: #000000;
+    font-family: 'Sanchez', 'Times New Roman', serif;
+ }
+ 
+ a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+ }
+ 
+ input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .cr-red {
+    color: #9a2018;
+ }
+ 
+ /* 2. ---Main Nav--- */
+ 
+
+ #main-nav label img {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all .5s ease;
+    margin-bottom: 20px; 
+ } 
+ 
+ #main-nav input, #burger-con {
+    display: none;
+ }
+  
+ #main-nav input:checked ~ #burger-con {
+    display: block;
+ }
+ 
+ #main-nav input:checked ~ label img {
+    transform: rotate(90deg);
+ }
+ 
+ #main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ #main-nav ul li a {
+    display: block;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: #242380;
+ }
+ 
+ #main-nav ul li {
+    border-bottom: 1px solid #efefef;
+ }
+ 
+ 
+ 
+ #main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+ }
+ 
+ #main-nav ul li:last-child {
+    margin-bottom: 10px;
+ } 
+ 
+
+ 
+ #logo {
+    max-width: 288px;
+    margin-bottom: 20px;
+ }
+
+ #burger {
+    margin-top: 50px;
+ }
+ 
+ /* 3. ---Main beer Image--- */
+ 
+ #beer img {
+    grid-column: 1/-1;
+    grid-row: 1/1;
+    justify-self: center;
+ }
+ 
+ #beer-main {
+    height: 258px;
+    width: 412px;
+    /*  image keeps proper aspect ratio, is clipped to fit its container  */
+    object-fit: cover;
+ }
+ 
+ #beer .grid-con {
+    /* Telling this grid to live in the middle column */
+    grid-column: 2/3;
+    /* also telling it stay in the first row, so it overlaps the beer image */
+    grid-row:1/1;
+    /* get rid of margin 0 auto from the original class */
+    margin: 0;
+ }
+
+
+ /* DRINKING BEER IMAGE */
+
+#drinking-beer img {
+   height: 258px;
+   width: 412px;
+   object-fit: cover;
+}
+
+
+
+/* BEER GLASS IMAGE */
+
+
+#beer-glass img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#beer-glass-main {
+   height: 258px;
+   width: 412px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
+   object-fit: cover;
+}
+
+#beer-glass .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 2/3;
+   /* also telling it stay in the first row, so it overlaps the beer image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
+ 
+ 
+ .line-seperator {
+    margin-top: 20px;
+    border-top: solid 3px #ffffff;
+    padding-top: 20px;
+ }
+ 
+ #beer-summary p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+ }
+
+ .heading {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 50px;
+    color:#242380;
+ }
+
+ .sub-heading {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+    color: #242380;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+ }
+
+ .reviews {
+    background-color: #3f3ce530 ;
+ }
+
+
+#contact-beer-form form {
+   display: flex;
+   flex-direction: column;
+}
+
+#contact-beer-form input, textarea {
+   padding: 22px;
+   border: 2px solid #d6d6d6;
+   background-color: #f7f7f7;
+   border-radius: 5px;
+   margin-bottom: 30px;
+   font: inherit;
+   width: 100%;
+}
+
+#contact-beer-form textarea {
+   height: 250px;
+}
+
+#contact-beer-form input[type="submit"] {
+   padding: 12px 28px;
+   background: #242380;
+   color: #fff;
+   border: none;
+   transition: all 200ms ease-in;
+   width: 150px;
+   align-self: flex-end;
+}
+
+#contact-beer-form input[type="submit"]:hover {
+   background-color: #626262;
+   border-radius: 0;
+}
+ 
+ 
+ 
+ 
+ /* 8. ---Footer--- */
+ 
+ #footer-beer {
+    background-image: url(../images/footer-mt.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin-top: 40px;
+    padding-bottom: 20px;
+ }
+ 
+ /*image switching for retina screens*/
+ 
+ @media screen and (min-resolution: 200dpi),
+         screen and (min-resolution: 1.25dppx) {
+    #footer-beer {
+         background-image: url(../images/mobile_footer.png);
+     }		
+ }
+ 
+.footer-rights p{
+   margin-bottom: 20px;
+}
+
+#footer-beer p {
+   padding-top: 10px;
+}
+ #facebook {
+   padding-left: 30%;
+ }
+
+ #footer-beer img {
+   padding-top: 50px;
+ }
+
+ #price-policy {
+   text-align: center;
+ }
+ #footer-nav {
+    display: none;
+ }
+ 
+ 
+ 
+ 
+ /* 10. ---Tablet Sized Screens--- */
+ 
+ @media screen and (min-width: 768px) {
+ 
+    #sticky-nav-con {
+       position: sticky;
+       top: 0px;
+       background-color: #fff;
+       border-bottom: solid 1px #c3c3c3;
+       z-index: 1;
+    }
+
+    #hamburger {
+      display: none;
+    }
+
+    #burger {
+      display: none;
+    }
+ 
+    #logo {
+       margin-top: 25px;
+       order: -1;
+       height: 100px;
+       width: 200px;
+
+    }
+ 
+    #button {
+       display: none;
+    }
+ 
+    #burger-con {
+       display: block;
+       font-size: 12px;
+    }
+ 
+    #burger-con ul li, #burger-con ul li:first-child {
+       border: none;
+       display: inline;
+    }
+ 
+    #main-nav ul li a {
+       display: inline;
+       font-size: 14px;
+    }
+ 
+    #burger-con ul li {
+       margin-right: 10px;
+    }
+ 
+    #burger-con ul li:last-child {
+       margin-right: 0px;
+    }
+ 
+    #main-nav {
+       padding-left: 30px;
+       margin-top: 4%;
+       margin-bottom: 4%;
+       margin-top: 12%;
+    }
+    
+    #beer {
+      padding-top: 50px;
+    }
+ 
+    #beer-main {
+       height: 455px;
+       object-position: 30%;
+    }
+ 
+
+    #contact {
+       line-height: 22px;
+       height: 214px;
+       padding-top: 60px;
+       font-size: 11px;
+    }
+
+    #contact-beer-form {
+      padding-top: 50px;
+    }
+ 
+    #contact .grid-con > div {
+       width: auto;
+       margin: 0;
+    }
+ 
+    #contact-beer {
+       height: 240px;
+    }
+    #contact-beer-text {
+       padding-top: 50px;
+       margin-top: 20px;
+    }
+
+   
+ 
+    #footer-nav {
+       display: inline;
+       text-align: center;
+ 
+    }
+ 
+
+ 
+    #footer-beer {
+       background-image: url(../images/footer.png);
+    }
+    
+    /*image switching for retina screens*/
+    
+    @media screen and (min-resolution: 200dpi),
+          screen and (min-resolution: 1.25dppx) {
+       #footer-beer {
+          background-image: url(../images/footer.png);
+       }		  
+    }
+ 
+    #footer-nav {
+       margin-top: 40px;
+    }
+ 
+    #footer-nav ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+    }
+ 
+    #footer-nav ul li a {
+       color: #fff;
+       margin-left: 25px;
+       margin-right: 25px;
+      
+    }
+ 
+    #footer-nav ul li {
+       margin-bottom: 20px;
+       display: inline;
+      
+    }   
+
+    #footer-rights p {
+      margin-top: 50px;
+    }
+ 
+ }
+ 
+ /* 11. ---Desktop Sized Screens--- */
+ 
+ @media screen and (min-width: 1200px) {
+    #main-header {
+       height: 110px;
+    }
+
+ 
+    #main-nav {
+       margin-top: 2%;
+       margin-bottom: 2%;
+       margin-left: 25px;
+    }
+ 
+    #burger-con ul li {
+       margin-right: 25px;
+    }
+ 
+    #burger-con {
+       font-size: 16px;
+       margin-top: 28px;
+    }
+ 
+
+    #beer-main {
+       object-position: 15%;
+    }
+ 
+    
+ 
+    #about-beer {
+       height: 380px;
+    }
+ 
+    #contact-beer {
+       height: 380px;
+    }
+ }
+ 
+ 

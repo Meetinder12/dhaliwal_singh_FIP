@@ -13,6 +13,11 @@
 </head>
     <body>
         <h1 class="hidden">Welcome to Billy Beer</h1>
+
+
+        <!--      HEADER      -->
+
+
         <div id="sticky-nav-con">
             <header class="grid-con" id="main-header">
                 <nav id="main-nav" class="col-span-full m-col-start-6 m-col-end-11 l-col-start-6 l-col-end-12">
@@ -32,14 +37,18 @@
                     </div>
                 </nav>
                 <div id="logo" class="col-start-2 col-end-4 m-col-start-1 m-col-end-4 .l-col-start-1 .l-col-end-4">
-                    <img src="images/billy beer logo.svg" alt="Billy Beer Logo" href="index.html">
+                    <img src="images/billy beer logo.svg" alt="Billy Beer Logo">
                 </div>
 
             </header>
         </div>
 
 
-            <section id="old-beer" class="full-width-grid-con">
+        <!--     FIRST IMAGE      -->
+
+
+
+            <section id="old-beer" class="full-width-grid-con container">
                 <h2 class="hidden">new logo</h2>
                 <img
                     sizes="100vw"
@@ -53,12 +62,17 @@
                     images/old-billy_c_scale,w_1200.jpg 1200w,"
                     src="images/old-billy_c_scale,w_1200.jpg"
                     alt="old billy beer" id="old-beer-main">
+
+                    <button id="ThirdBtn">Click for Details</button>
         
             </section>
 
 
+            <!--      PARAGRAPH ONE       -->
+
+
             <div class="grid-con">
-                <section id="old-billy-text" class=" col-span-full m-col-start-2 m-col-end-12 ">
+                <section  class=" col-span-full m-col-start-2 m-col-end-12 beer-summary ">
 
                     <p>Billy Beer was first brewed in 1977 in the United States by Billy Carter. I wanted to help BILLY BEER to regain the customers who love American Light
                         beer. Now this beer was first made in the US in July 1977 by  the Falls City 
@@ -68,6 +82,10 @@
             </div>
 
                 
+            <!--      SECOND IMAGE      -->
+
+
+
             <section id="new-beer-story" class="full-width-grid-con">
                 <h2 class="hidden">new logo</h2>
                 <img
@@ -85,9 +103,13 @@
         
             </section>
 
+            
+            <!--      PARAGRAPH TWO      -->
+
+
 
                 <div class="grid-con">
-                    <section id="new-billy-text" class="col-span-full m-col-start-2 m-col-end-12">
+                    <section  class="col-span-full m-col-start-2 m-col-end-12 beer-summary">
                         <p>The iconic Billy Beer brand undergoes a rejuvenation, with
                              a refreshed logo, label, and packaging set to captivate global markets.
                               Revamped aesthetics pay homage to its storied history while embracing modern sensibilities,
@@ -98,6 +120,13 @@
 
                 
             </div>
+
+            <div id="overlay"></div>
+
+
+
+            <!--      FOOTER      -->
+
 
 
     <footer id="footer-beer">
@@ -136,6 +165,6 @@
                 </div>
             </div>
         </footer>
-
+        <script src="js/main.js"></script>  
     </body>
 </html>

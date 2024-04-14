@@ -16,13 +16,14 @@
  /* 1. ---General Styles--- */
 
  body {
-    color: #000000;
+    color: #242380;
     font-family: 'Sanchez', 'Times New Roman', serif;
+    font-size: 16px;
  }
  
  a {
     text-decoration: none;
-    transition: all .5s ease-in-out;
+    transition: all .1s ease-in;
  }
  
  input, textarea {
@@ -31,9 +32,6 @@
     padding: 0;
  }
  
- .cr-red {
-    color: #9a2018;
- }
  
  /* 2. ---Main Nav--- */
  
@@ -296,6 +294,7 @@
 }
 
 #new-beer-story-main {
+   padding-top: 20px;
    height: 251px;
    width: 412px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
@@ -318,10 +317,8 @@
  }
  
  .beer-summary p {
-    margin-top: 10px;
-    font-size: 14px;
+    padding-top: 15px;
     line-height: 22px;
-    margin-bottom: 20px;
  }
 
  .heading {
@@ -415,6 +412,7 @@
  
 .footer-rights p{
    margin-top: 50px;
+   text-align: center;
 }
 
 #footer-beer p {
@@ -445,6 +443,9 @@
 
 
  @media screen and (min-width: 768px) {
+
+
+
  
     #sticky-nav-con {
        position: sticky;
@@ -486,8 +487,13 @@
  
     #main-nav ul li a {
        display: inline;
-       font-size: 14px;
+       font-size: 16px;
+       padding-right: 7px;
     }
+
+    #main-nav ul li a:hover {
+      font-size: 18px;
+   }
  
     #burger-con ul li {
        margin-right: 10px;
@@ -495,6 +501,7 @@
  
     #burger-con ul li:last-child {
        margin-right: 0px;
+       padding-right: 0;
     }
  
     #main-nav {
@@ -505,10 +512,13 @@
     }
     
     #beer {
-      padding-top: 50px;
       text-align: center;
     }
  
+    .beer-summary p {
+      font-size: 18px;
+   }
+
     #beer-main {
        height: 455px;
        object-position: 30%;
@@ -652,6 +662,8 @@
 
  
  @media screen and (min-width: 1200px) {
+
+
     #main-header {
        height: 110px;
     }
@@ -666,6 +678,17 @@
     #burger-con ul li {
        margin-right: 25px;
     }
+
+    #main-nav ul li a {
+      font-size: 16px;
+      padding-right: 15px;
+   }
+
+   #burger-con ul li:last-child {
+      margin-right: 0px;
+      padding-right: 0;
+   }
+
  
     #burger-con {
        font-size: 16px;

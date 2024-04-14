@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var overlay = document.getElementById("overlay");
         overlay.style.display = "flex";
-        overlay.innerHTML = "<div class='overlay-content'>Billy beer  was first made in the heart of United states of America in 1977, by the Falls city Brewing Company.   </div>";
+        overlay.innerHTML = "<div class='overlay-content'>Billy beer  was first made in the heart of United states of America in 1977, by the Falls city Brewing Company. It was first promoted by the Billy Carter who was the younger brother of the president of the United States back then. Now we are relaunching it with a new taste and everyone is gonna love it.    </div>";
   
 
         overlay.addEventListener("click", function(event) {

@@ -3,15 +3,13 @@
 
     1.  General Styles
     2.  Main Nav
-    3.  Main beer Image
-    4.  Main beer Image Contact
-    5.  Why Couples Resort
-    6.  About & FAQ
-    7.  Contact Form
-    8.  Footer
-    9.  Custom Queries
-    10. Tablet Queries
-    11. Desktop Queries 
+    3.  Buttons section
+    4.  Images
+    5.  Contact Page
+    6.  Footer
+    7.  Custom Queries
+    8.  Tablet Queries
+    9.  Desktop Queries 
  */
 
 
@@ -98,8 +96,77 @@
  #burger {
     margin-top: 50px;
  }
+
+
+
+/* 3, ------ BUTTON SECTION-------- */
+
+
+
+.container {
+   position: relative;
+   align-items: center;
+   
+}
+
+#FirstBtn {
+   position: absolute;
+   left: 8%;
+   height: 40px;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
+
+#SecondBtn {
+   position: absolute;
+   height: 40px;
+   right: 15%;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
+
+#ThirdBtn {
+   position: absolute;
+   height: 40px;
+   right: 15%;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
  
- /* 3. ---Main beer Image--- */
+
+ #overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+   display: none;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .overlay-content {
+   background-color: #E79C0D;
+   color: #242380;
+   width: 300px;
+   padding: 10px;
+   border-radius: 10px;
+ }
+
+
+
+
+ /* 4. ----- Images ----- */
+
+
+ /*---Main beer Image--- */
  
  #beer img {
     grid-column: 1/-1;
@@ -108,7 +175,7 @@
  }
  
  #beer-main {
-    height: 245px;
+    height: 251px;
     width: 412px;
     /*  image keeps proper aspect ratio, is clipped to fit its container  */
     object-fit: cover;
@@ -116,7 +183,7 @@
  
  #beer .grid-con {
     /* Telling this grid to live in the middle column */
-    grid-column: 2/3;
+    grid-column: 1/-1;
     /* also telling it stay in the first row, so it overlaps the beer image */
     grid-row:1/1;
     /* get rid of margin 0 auto from the original class */
@@ -183,7 +250,8 @@
 }
 
 #beer-glass-main {
-   height: 220px;
+   width: 412px;
+   height: 251px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
 }
@@ -206,7 +274,7 @@
 
 #old-beer-main {
    width: 412px;
-   height: 224px;
+   height: 251px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
    object-fit: cover;
    margin-right: 0;
@@ -220,6 +288,28 @@
    /* get rid of margin 0 auto from the original class */
    margin: 0;
 }
+
+#new-beer-story img {
+   grid-column: 1/-1;
+   grid-row: 1/1;
+   justify-self: center;
+}
+
+#new-beer-story-main {
+   height: 251px;
+   width: 412px;
+   /*  image keeps proper aspect ratio, is clipped to fit its container  */
+   object-fit: cover;
+}
+
+#new-beer-story .grid-con {
+   /* Telling this grid to live in the middle column */
+   grid-column: 1/-1;
+   /* also telling it stay in the first row, so it overlaps the beer image */
+   grid-row:1/1;
+   /* get rid of margin 0 auto from the original class */
+   margin: 0;
+}
  
  .line-seperator {
     margin-top: 20px;
@@ -227,7 +317,7 @@
     padding-top: 20px;
  }
  
- #beer-summary p {
+ .beer-summary p {
     margin-top: 10px;
     font-size: 14px;
     line-height: 22px;
@@ -253,6 +343,13 @@
  .reviews {
     background-color: #3f3ce530 ;
  }
+
+
+
+
+/* 5. ------Contact Page------- */
+
+
 
 
 #contact-beer-form form {
@@ -289,22 +386,14 @@
    border-radius: 0;
 }
 
+ 
+ 
+ 
+ 
+ /* 6. ---Footer--- */
+ 
 
-#old-billy-text {
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
 
-#new-billy-text {
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
- 
- 
- 
- 
- /* 8. ---Footer--- */
- 
  #footer-beer {
     background-image: url(../images/footer-mt.jpg);
      background-repeat: no-repeat;
@@ -325,7 +414,7 @@
  }
  
 .footer-rights p{
-   margin-bottom: 20px;
+   margin-top: 50px;
 }
 
 #footer-beer p {
@@ -349,8 +438,12 @@
  
  
  
- /* 10. ---Tablet Sized Screens--- */
+ /* 8. ---Tablet Sized Screens--- */
  
+
+
+
+
  @media screen and (min-width: 768px) {
  
     #sticky-nav-con {
@@ -413,6 +506,7 @@
     
     #beer {
       padding-top: 50px;
+      text-align: center;
     }
  
     #beer-main {
@@ -445,9 +539,18 @@
        margin-top: 20px;
     }
 
+
+    #FirstBtn{
+      margin-left: 15%;
+    }
+
+    .overlay-content {
+      width: 800px;
+    }
+
     #beer-main {
-      width: 1200px;
-      height: 550px;
+      width: 768px;
+      height: 350px;
       /*  image keeps proper aspect ratio, is clipped to fit its container  */
       object-fit: cover;
    }
@@ -466,12 +569,26 @@
       object-fit: cover;
    }
 
-   #old-beer-main {
-      width: 1200px;
-      height: 500px;
+   #beer-glass-main {
+      width: 768px;
+      height: 350px;
       /*  image keeps proper aspect ratio, is clipped to fit its container  */
       object-fit: cover;
-      margin-right: 0;
+   }
+
+   #old-beer-main {
+      width: 768px;
+      height: 350px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+
+   }
+
+   #new-beer-story-main {
+      width: 768px;
+      height: 350px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
    }
    
  
@@ -524,8 +641,15 @@
     }
  
  }
+
+
+
  
- /* 11. ---Desktop Sized Screens--- */
+ /* 9. ---Desktop Sized Screens--- */
+
+
+
+
  
  @media screen and (min-width: 1200px) {
     #main-header {
@@ -553,7 +677,34 @@
        object-position: 15%;
     }
  
-    
+    #beer-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
+   #beer-glass-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
+
+   #old-beer-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+
+   }
+
+   #new-beer-story-main {
+      width: 1200px;
+      height: 516px;
+      /*  image keeps proper aspect ratio, is clipped to fit its container  */
+      object-fit: cover;
+   }
  
     #about-beer {
        height: 380px;

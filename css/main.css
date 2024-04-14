@@ -3,15 +3,13 @@
 
     1.  General Styles
     2.  Main Nav
-    3.  Main beer Image
-    4.  Main beer Image Contact
-    5.  Why Couples Resort
-    6.  About & FAQ
-    7.  Contact Form
-    8.  Footer
-    9.  Custom Queries
-    10. Tablet Queries
-    11. Desktop Queries 
+    3.  Buttons section
+    4.  Images
+    5.  Contact Page
+    6.  Footer
+    7.  Custom Queries
+    8.  Tablet Queries
+    9.  Desktop Queries 
  */
 
 
@@ -98,8 +96,77 @@
  #burger {
     margin-top: 50px;
  }
+
+
+
+/* 3, ------ BUTTON SECTION-------- */
+
+
+
+.container {
+   position: relative;
+   align-items: center;
+   
+}
+
+#FirstBtn {
+   position: absolute;
+   left: 8%;
+   height: 40px;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
+
+#SecondBtn {
+   position: absolute;
+   height: 40px;
+   right: 15%;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
+
+#ThirdBtn {
+   position: absolute;
+   height: 40px;
+   right: 15%;
+   color:#242380;
+   border-radius: 10px;
+   font-size: 20px;
+   border: #ffffff;
+}
  
- /* 3. ---Main beer Image--- */
+
+ #overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+   display: none;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .overlay-content {
+   background-color: #E79C0D;
+   color: #242380;
+   width: 300px;
+   padding: 10px;
+   border-radius: 10px;
+ }
+
+
+
+
+ /* 4. ----- Images ----- */
+
+
+ /*---Main beer Image--- */
  
  #beer img {
     grid-column: 1/-1;
@@ -250,7 +317,7 @@
     padding-top: 20px;
  }
  
- #beer-summary p {
+ .beer-summary p {
     margin-top: 10px;
     font-size: 14px;
     line-height: 22px;
@@ -276,6 +343,13 @@
  .reviews {
     background-color: #3f3ce530 ;
  }
+
+
+
+
+/* 5. ------Contact Page------- */
+
+
 
 
 #contact-beer-form form {
@@ -312,22 +386,14 @@
    border-radius: 0;
 }
 
+ 
+ 
+ 
+ 
+ /* 6. ---Footer--- */
+ 
 
-#old-billy-text {
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
 
-#new-billy-text {
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
- 
- 
- 
- 
- /* 8. ---Footer--- */
- 
  #footer-beer {
     background-image: url(../images/footer-mt.jpg);
      background-repeat: no-repeat;
@@ -372,8 +438,12 @@
  
  
  
- /* 10. ---Tablet Sized Screens--- */
+ /* 8. ---Tablet Sized Screens--- */
  
+
+
+
+
  @media screen and (min-width: 768px) {
  
     #sticky-nav-con {
@@ -469,6 +539,15 @@
        margin-top: 20px;
     }
 
+
+    #FirstBtn{
+      margin-left: 15%;
+    }
+
+    .overlay-content {
+      width: 800px;
+    }
+
     #beer-main {
       width: 768px;
       height: 350px;
@@ -562,8 +641,15 @@
     }
  
  }
+
+
+
  
- /* 11. ---Desktop Sized Screens--- */
+ /* 9. ---Desktop Sized Screens--- */
+
+
+
+
  
  @media screen and (min-width: 1200px) {
     #main-header {

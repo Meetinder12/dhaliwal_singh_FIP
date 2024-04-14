@@ -17,7 +17,7 @@
 
  body {
     color: #242380;
-    font-family: 'Sanchez', 'Times New Roman', serif;
+    font-family: 'Segoe UI', 'Times New Roman', serif;
     font-size: 16px;
  }
  
@@ -248,6 +248,7 @@
 }
 
 #beer-glass-main {
+   padding-top: 20px;
    width: 412px;
    height: 251px;
    /*  image keeps proper aspect ratio, is clipped to fit its container  */
@@ -489,10 +490,12 @@
        display: inline;
        font-size: 16px;
        padding-right: 7px;
+       font-weight: bold;
     }
 
     #main-nav ul li a:hover {
       font-size: 18px;
+
    }
  
     #burger-con ul li {
